@@ -2,18 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel='stylesheet' href='bagels.css'/>
+    <link rel="stylesheet" href="bagels.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
     <title>BAGELS</title>
   </head>
   <body>
-    <h1> COME PLAY BAGELS!!!!</h1>
-    <p id = 'gameBoard'></p>
-      <p id ='answerBlock'> YOU WILL NEVER GUESS THIS </p>
+    <div class="container" id = "gameBoard">
+      <h1> COME PLAY BAGELS!!!!</h1>
+      <p>
+        COME TEST YOUR LOGIC SKILLS AGAINST THE COMPUTER BY GUESSING 3 NUMBERS AT A TIME UNTIL YOU READ THE COMPUTERS MIND.
+      </p>
 
 
+        <input type="text" class="input-sm" maxlength="1" id="guess1">
+        <input type="text" class="input-sm" maxlength="1" id="guess1">
+        <input type="text" class="input-sm" maxlength="1" id="guess1">
+        <button type="button" id ="guessButton">SUBMIT GUESS</button>
+        <div class="" id="guesses">
+          <!-- guesses go here -->
+        </div>
 
-
-
-    <script type = 'text/javascript'  src='bagels.js'></script>
+      <script type = "text/javascript"  src="bagels.js"></script>
+    </div>
   </body>
 </html>
