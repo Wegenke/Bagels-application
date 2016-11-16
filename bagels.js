@@ -37,7 +37,7 @@ function compareUserVsComputer1(){
   } else if (computerChoice1 == guessDigit2 || computerChoice1 == guessDigit3){
     return response = 'fermi';
   } else {
-    return response = "bagel";
+    return response = "";
   }
 };
 function compareUserVsComputer2(){
@@ -46,7 +46,7 @@ function compareUserVsComputer2(){
   } else if (computerChoice2 == guessDigit1 || computerChoice2 == guessDigit3){
     return response = 'fermi';
   } else {
-    return response = 'bagel';
+    return response = "";
   }
 };
 function compareUserVsComputer3(){
@@ -55,9 +55,16 @@ function compareUserVsComputer3(){
   }else if (computerChoice3 == guessDigit2 || computerChoice1 == guessDigit1){
    return response = 'fermi';
   } else {
-   return response = 'bagel';
+   return response = "";
   }
 };
+
+function previousGuess(){
+  var div = document.getElementById('guesses');
+  var nextLine = div.document.createElement("p")
+  var guessLine = "Guess 1: " + guessDigit1 + "     " + "Guess 2: " + guessDigit2 + "     " + "Guess 3: " + guessDigit3 + "     !!!" + "<br>";
+  nextLine.guessLine
+}
 
 document.getElementById('guessButton').addEventListener('click', function(){
   getUserGuess();
@@ -65,9 +72,11 @@ document.getElementById('guessButton').addEventListener('click', function(){
   compareUserVsComputer2();
   compareUserVsComputer3();
   console.log(compareUserVsComputer1(), compareUserVsComputer2(), compareUserVsComputer3());
-  if (compareUserVsComputer1() === "bagel" && compareUserVsComputer2() === 'bagel' && compareUserVsComputer3() === 'bagel'){
-    alert('BAGELS');
+  previousGuess();
+  if (compareUserVsComputer1() === "" && compareUserVsComputer2() === "" && compareUserVsComputer3() === ""){
+    alert('BAGEL');
   }
+  
 });
 
 var computerNumbers = [computerChoice1, computerChoice2, computerChoice3];
