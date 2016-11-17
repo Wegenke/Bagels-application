@@ -47,22 +47,31 @@ function compareUserVsComputer3(){
   else return "";
 }
 
-function previousGuess(){
-  var guessLine = "Guess 1: " + guessDigit1 + "     Guess 2: " + guessDigit2 + "     Guess 3: " + guessDigit3 + "!!!" + "<br>";
-  document.getElementById('guesses').innerHTML += guessLine;
-}
+// function returnLastGuess(){
+//   var guessLine1 =
+//   //  = "Guess 1: " + guessDigit1 + "     Guess 2: " + guessDigit2 + "     Guess 3: " + guessDigit3 + "!!!" + "<br>";
+//   document.getElementById('guesses').innerHTML += guessLine;
+// }
 
 document.getElementById('guessButton').addEventListener('click', function(){
   getUserGuess();
   compareUserVsComputer1();
   compareUserVsComputer2();
   compareUserVsComputer3();
-  console.log(compareUserVsComputer1(), compareUserVsComputer2(), compareUserVsComputer3());
-  previousGuess();
-  if (compareUserVsComputer1() === "" && compareUserVsComputer2() === "" && compareUserVsComputer3() === ""){
-    alert('BAGEL');
-  }
-  
+  // console.log(compareUserVsComputer1(), compareUserVsComputer2(), compareUserVsComputer3());
+  // returnLastGuess();
+  if (compareUserVsComputer1() === "" && compareUserVsComputer2() === "" && compareUserVsComputer3() === "") alert('BAGELS');
+  var gameTable = document.getElementById('guesses');
+  var nextRow = gameTable.insertRow();
+  var firstGuess = nextRow.insertCell(0);
+    firstGuess.innerHTML = guessDigit1;
+  var secondGuess = nextRow.insertCell(1);
+    secondGuess.innerHTML = guessDigit2;
+  var thirdGuess = nextRow.insertCell(2);
+    thirdGuess.innerHTML = guessDigit3;
+  var attemptResults = nextRow.insertCell(3);
+    attemptResults.innerHTML = (compareUserVsComputer1() + " " + compareUserVsComputer2() +" "+compareUserVsComputer3());
+    
 });
 
 // var computerNumbers = [computerChoice1, computerChoice2, computerChoice3];

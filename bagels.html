@@ -6,22 +6,35 @@
     <title>BAGELS</title>
   </head>
   <body>
-    <div class="container" id = "gameBoard">
+    <div class = 'container'>
+      <div class = 'bootstrap'>
       <h1> COME PLAY BAGELS!!!! 
         <button id = 'startGame' type="button"> Start Your Game</button>
       </h1>
-      <p>
+      <h2>
         COME TEST YOUR LOGIC SKILLS AGAINST THE COMPUTER BY GUESSING 3 NUMBERS AT A TIME UNTIL YOU READ THE COMPUTERS MIND.
-      </p>
+      </h2>
 
-
-        <input type="text" class="input-sm" maxlength="1" id="guess1">
-        <input type="text" class="input-sm" maxlength="1" id="guess2">
-        <input type="text" class="input-sm" maxlength="1" id="guess3">
-        <button type="button" id ="guessButton" disabled>SUBMIT GUESS</button>
-
+    <table id = "gameTable"> 
+      <thead>         
+        <tr>
+          <th>GUESS 1</th>
+          <th>GUESS 2</th>
+          <th>GUESS 3</th>
+          <th>Guess I Dare You!</th>
+        </tr>
+      </thead>
+      <tbody id = 'guesses'>
+          <tr>
+          <td><input type="text" class="input-sm" maxlength="1" id="guess1"></td>
+          <td><input type="text" class="input-sm" maxlength="1" id="guess2"></td>
+          <td><input type="text" class="input-sm" maxlength="1" id="guess3"></td>
+          <td><button type="button" id ="guessButton" disabled>DO NOT PUSH THIS TOO HARD</button></td>
+          </tr> 
+      <tbody>  
      <script type = "text/javascript"  src="bagels.js"></script> 
-    </div>
+    </table>
+    </div></div>
     <span id="guesses">     
     </span>
   </body>
